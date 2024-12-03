@@ -2,103 +2,92 @@ console.log("👉🏼 Variable and Data Types");
 
 // Variables and Data Types
 
-
 // Data Types 
 
 // To Declare String Value
-string = "Saad Shaikh";
-console.log(string);
-
+let name = "John Doe";
+console.log(name);
 
 // To Declare Number Value
-number = 21;
-console.log(number);
-
+let age = 28;
+console.log(age);
 
 // To Declare Boolean Value
-boolean = true;
-console.log(boolean);
-
+let isActive = true;
+console.log(isActive);
 
 // To Declare Null Value
-Null = null;
-console.log(Null);
-
+let emptyValue = null;
+console.log(emptyValue);
 
 // To Declare Undefined Value
-Undefined = undefined;
-console.log(Undefined);
-
+let notAssigned;
+console.log(notAssigned);
 
 // To Declare Objects
-object = {
-   name: "Saad",
-   age: 21
+let person = {
+   name: "John Doe",
+   age: 28,
+   occupation: "Software Developer"
 };
-console.log(object);
-
+console.log(person);
 
 // To Declare Array
-array = ["Reading", "Traveling", "Coding"];
-console.log(array);
-
+let hobbies = ["Reading", "Cycling", "Gaming"];
+console.log(hobbies);
 
 // To Check Type of Variables
 console.log(
-   "Type of string:", typeof string,
-   "\nType of number:", typeof number,
-   "\nType of boolean:", typeof boolean,
-   "\nType of Null:", typeof Null,
-   "\nType of Undefined:", typeof Undefined,
-   "\nType of object:", typeof object,
-   "\nType of array:", typeof array
+   "Type of name:", typeof name,
+   "\nType of age:", typeof age,
+   "\nType of isActive:", typeof isActive,
+   "\nType of emptyValue:", typeof emptyValue,
+   "\nType of notAssigned:", typeof notAssigned,
+   "\nType of person:", typeof person,
+   "\nType of hobbies:", typeof hobbies
 );
-
-
 
 // Variables
 
-// Variable in ( var ) can be re-declared & updated. A global Scope Variable
-var age = 30;  // Declared with var
-var age = 35;  // Redeclared
-console.log(age);
+// Variable in (var) can be re-declared & updated. A global Scope Variable
+var city = "New York";  // Declared with var
+var city = "Los Angeles";  // Redeclared
+console.log(city);
 
-// Variable in ( let ) cannot be re-declared but can be updated. A block Scope Variable
-
-let name = "John";
-name = "Jane";
-console.log(name);
-
-// Variable in ( const ) cannot be re-declared or updated. A block Scope Variable
-
-const country = "USA";
+// Variable in (let) cannot be re-declared but can be updated. A block Scope Variable
+let country = "Canada";
+country = "Australia";
 console.log(country);
 
+// Variable in (const) cannot be re-declared or updated. A block Scope Variable
+const continent = "Europe";
+console.log(continent);
 
-// Practice Question 1
+/* Practice Question 1: Product Card
 
-const card = {
-   title: "Product Name",
-   rating: 5,
-   offer: 5,
-   price: 250,
+const productCard = {
+   title: "Smartphone",
+   rating: 4.5,
+   offer: 20,
+   price: 699,
    dealOfTheDay: true
-}
+};
 
-console.log(card);
+console.log(productCard); */
 
-// Practice Question 2
+/* Practice Question 2: Instagram Profile Card
 
-const InstaCard = {
-   title: "Saad Shaikh",
+const instaProfile = {
+   title: "John Doe",
    follow: true,
-   message: "Message",
-   post: 195,
-   follower: 555,
-   following: 45,
-   username: "Shaikh Saad",
-   thread: "threadName",
-   creator: false,
-   caption: "lorem ipsum dolor sit amet, consectetur adipiscing"
-}
-console.log(InstaCard);
+   message: "Hey, check out my latest post!",
+   post: 350,
+   followers: 1200,
+   following: 150,
+   username: "john_doe_28",
+   thread: "Tech Enthusiasts",
+   creator: true,
+   caption: "Exploring new technologies and innovations."
+};
+
+console.log(instaProfile); */

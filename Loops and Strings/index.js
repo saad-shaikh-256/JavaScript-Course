@@ -7,11 +7,10 @@ console.log("\n***************************************************************\n
 
 console.log("👉🏼 for Loop \n");
 
-let number = 5;
+let number = 7;
 for (let loop = 1; loop <= 10; loop++) {
    console.log(number, "*", loop, "=", number * loop);
 }
-
 
 // Infinite Loop : A loop which never ends
 console.log("\n***************************************************************\n");
@@ -19,11 +18,12 @@ console.log("\n***************************************************************\n
 console.log("👉🏼 Infinite Loop \n");
 
 /*
+Uncomment this to see the infinite loop in action.
+Use Ctrl+C to stop the loop in the console.
 for (let i = 1; i >= 0; i++) {
-   console.log("Loop Number :",i);
+   console.log("Loop Number :", i);
 }
 */
-
 
 
 // While Loop
@@ -32,12 +32,10 @@ console.log("\n***************************************************************\n
 console.log("👉🏼 While Loop \n");
 
 let i = 1;
-while (i <= 10) {
+while (i <= 5) {
    console.log("Loop Number :", i);
    i++;
 }
-
-
 
 // do-while Loop
 console.log("\n***************************************************************\n");
@@ -49,67 +47,56 @@ let ii = 1;
 do {
    console.log("Loop Number :", ii);
    ii++;
-} while (ii <= 10);
+} while (ii <= 5);
 
 
-
-// for-of Loop : Help to put loops on strings and arrays
+// for-of Loop : Helps to loop through strings and arrays
 console.log("\n***************************************************************\n");
 
 console.log("👉🏼 For-Of Loop \n");
 
-let name = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let value = 65;
-for (let i of name) { // This will split the name into character
-   console.log(i, "In ASCII is ", value);
-   value++;
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let asciiValue = 65;
+for (let char of alphabet) { // This will split the string into characters
+   console.log(char, "In ASCII is", asciiValue);
+   asciiValue++;
 }
 
 
-
-// for-in Loop : Help to get Object keys and works on objects and arrays
+// for-in Loop : Helps to get Object keys and works with objects and arrays
 console.log("\n***************************************************************\n");
 
 console.log("👉🏼 For-In Loop \n");
 
 let student = {
-   name: "John",
-   age: 20,
-   city: "New York",
+   name: "Alice",
+   age: 22,
+   city: "Los Angeles",
    isPass: true
 };
 
-for (let i in student) {
-   console.log("key =", i, "value =", student[i]);
+for (let key in student) {
+   console.log("Key =", key, "Value =", student[key]);
 }
 
-
-/*
-
-Practice Question 1
+/* Practice Question 1: Print Even Numbers up to 100
 
 console.log("\n***************************************************************\n");
 
-console.log("👉🏼 Practice Question-1 : Print Even Number upto 100 \n");
-
+console.log("👉🏼 Practice Question-1 : Print Even Numbers up to 100 \n");
 
 for (let i = 1; i <= 100; i++) {
    if (i % 2 === 0) {
-      console.log("num =", i);
+      console.log("Even number:", i);
    }
-   else { }
-}
-
-*/
+} */
 
 
-/*
-Practice Question 2
+/* Practice Question 2: Guess the Number
 
 console.log("\n***************************************************************\n");
 
 console.log("👉🏼 Practice Question-2 : Guess the number \n");
-
 
 alert("Guess the number Game between 1 to 10")
 let userNumber = prompt("Please enter");
@@ -120,19 +107,20 @@ while (userNumber != gameNumber) {
 }
 
 alert("Congratulations! You guessed the correct number.");
+
 */
 
 
-// Strings are Immutable in JS
+// Strings are Immutable in JavaScript
 
 // Create String
 console.log("\n***************************************************************\n");
 
 console.log("👉🏼 Create String \n");
 
-let str = "Saad Shaikh";
+let str = "John Doe";
 
-console.log("String is", str);
+console.log("String is:", str);
 
 
 // String Length
@@ -143,14 +131,12 @@ console.log("👉🏼 String Length \n");
 console.log("Length of", str, "is", str.length);
 
 
-
 // String Indices or Index
 console.log("\n***************************************************************\n");
 
 console.log("👉🏼 String Indices or Index \n");
 
-console.log(str[3], "is at 4 index in ", str);
-
+console.log(str[3], "is at index 3 in", str);
 
 
 // Template Literals
@@ -158,34 +144,29 @@ console.log("\n***************************************************************\n
 
 console.log("👉🏼 Template Literals \n");
 
-let specialString = `Template Literals`
-console.log("This is String is Made by using ` `", specialString);
-
+let specialString = `Template Literals`;
+console.log("This is a string created using template literals:", specialString);
 
 
 // String Methods
 console.log("\n***************************************************************\n");
 
-console.log("👉🏼String Methods \n");
+console.log("👉🏼 String Methods \n");
 
-console.log(str, "in UpperCase ", str.toUpperCase());
-console.log(str, "in LowerCase ", str.toLowerCase());
-console.log(str, "in trim ", str.trim()); //removes whitespace from start and end
-console.log(str, "in slice ", str.slice(0, 4));
+console.log(str, "in UpperCase:", str.toUpperCase());
+console.log(str, "in LowerCase:", str.toLowerCase());
+console.log(str, "trimmed:", str.trim()); // Removes whitespace from start and end
+console.log(str, "sliced (first 4 chars):", str.slice(0, 4));
 
-console.log("1st str is", str, "& 2nd str is ", specialString, "& Concat is", str.concat(specialString));
+console.log("1st string:", str, "& 2nd string:", specialString, "& Concatenated:", str.concat(specialString));
 
 // Replace String
-console.log(str, "Replaced str is =", str.replace("Saad", "Name"));
-console.log(str, "Replaced str is =", str.replaceAll("a", "A")); // To Replace All
+console.log(str, "Replaced string (John to Name):", str.replace("John", "Name"));
+console.log(str, "Replaced string (all 'o' with 'O'):", str.replaceAll("o", "O")); // Replace all occurrences
 
-console.log(str, "Character at", str.charAt(7));
+console.log(str, "Character at index 5:", str.charAt(5));
 
-
-
-/* 
-
-Practice Question 3
+/* Practice Question 3
 
 console.log("\n***************************************************************\n");
 
@@ -195,5 +176,4 @@ let fullName = prompt("Please enter username");
 let randomNumber = Math.floor(Math.random() * 100);
 let username = `@${fullName.trim()}${randomNumber}`;
 
-alert("Your username is: " + username);
-*/
+alert("Your username is: " + username); */
